@@ -1,0 +1,2660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Process_CSV</name>
+    <description>Procesa ficheros CSV</description>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2023/06/09 19:28:28.195</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2023/06/09 19:28:28.195</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>stagedb</name>
+    <server/>
+    <type>SQLITE</type>
+    <access>Native</access>
+    <database>/Volumes/T7 Touch/TFG/Stage/stage.db</database>
+    <port>-1</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>-1</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+    <hop>
+      <from>n_ID</from>
+      <to>n_Assigned_Group</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Repeat L,A, Assign LD</from>
+      <to>Split Priority</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Priority</from>
+      <to>Split Status</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort ID-Audit_Date</from>
+      <to>Repeat P,S,AG</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Repeat P,S,AG</from>
+      <to>n_ID</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>n_Assigned_Group</from>
+      <to>Repeat L,A, Assign LD</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ND,PD,PS,PG</from>
+      <to>first_LD,AG,RD</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>t_seconds,l_seconds</from>
+      <to>ifnull t_seconds,l_seconds</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Status</from>
+      <to>Split Reason</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ifnull t_seconds,l_seconds</from>
+      <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SLAs</from>
+      <to>Stream lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup</from>
+      <to>SLA Response</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SLA Response</from>
+      <to>SLA resolution</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SLA resolution</from>
+      <to>SLA reopen</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get_RD, Count_RD</from>
+      <to>ND,PD,PS,PG</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>first_LD,AG,RD</from>
+      <to>Path, NA, NL</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Path, NA, NL</from>
+      <to>t_seconds,l_seconds</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split Reason</from>
+      <to>Get_RD, Count_RD</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>BBDD Stage</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>SLA reopen</from>
+      <to>Time resolution, pending</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Time resolution, pending</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Sort ID-Audit_Date</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get files from result</from>
+      <to>CSV file input</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>BBDD Stage</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>stagedb</connection>
+    <schema/>
+    <table>incidents</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
+    <description>Se procesa el fichero de texto delimitado por comas para leer los campos</description>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename/>
+    <filename_field>path</filename_field>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>Y</parallel>
+    <newline_possible>N</newline_possible>
+    <format>Unix</format>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>Audit_date</name>
+        <type>Date</type>
+        <format>yyyy/MM/dd HH:mm:ss</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>ID</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Priority</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Status_Reason</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Assigned_Group</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Login</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Assignee</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Company</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+      <field>
+        <name>Company_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get_RD, Count_RD</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var Resolved_date = null;
+if (Status_ID == 4) {
+	Resolved_date = Audit_date;
+}
+
+
+if (n_ID == 1) {
+	count_RD = 0;
+}
+
+
+if (Resolved_date != null) {
+    count_RD += 1;
+}
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>count_RD</name>
+        <rename>count_RD</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Resolved_date</name>
+        <rename>Resolved_date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ND,PD,PS,PG</name>
+    <type>AnalyticQuery</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <group>
+      <field>
+        <name>ID</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <aggregate>Next_Date</aggregate>
+        <subject>Audit_date</subject>
+        <type>LEAD</type>
+        <valuefield>1</valuefield>
+      </field>
+      <field>
+        <aggregate>Previous_Date</aggregate>
+        <subject>Audit_date</subject>
+        <type>LAG</type>
+        <valuefield>1</valuefield>
+      </field>
+      <field>
+        <aggregate>Previous_Status_ID</aggregate>
+        <subject>Status_ID</subject>
+        <type>LAG</type>
+        <valuefield>1</valuefield>
+      </field>
+      <field>
+        <aggregate>Previous_Group</aggregate>
+        <subject>Assigned_Group</subject>
+        <type>LAG</type>
+        <valuefield>1</valuefield>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Path, NA, NL</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+
+var Path;
+if (Previous_Group==null) {
+	Path=null;
+}
+
+
+var New_assign;
+if (! Assigned_Group.equals(Previous_Group)) {
+    New_assign=1;
+	// una reasignación de grupo reactiva el incidente
+	if (Status_ID == 3) {
+		Status_ID = 1;
+		Status_Desc = "Assigned";
+	}
+	if (Path == null) {
+ 		 Path = Assigned_Group;
+	} else { 
+         Path = Path + "/" + Assigned_Group;
+	}
+} else {
+    New_assign=0;
+}
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>Path</name>
+        <rename>Path</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>New_assign</name>
+        <rename>New_assign</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Status_ID</name>
+        <rename>Status_ID</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>Status_Desc</name>
+        <rename>Status_Desc</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Repeat L,A, Assign LD</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+
+
+if (n_Assigned_Group == 1) {
+	var last_Login = null;
+	var last_Assignee = null;
+}
+
+// Login
+var Login_date;
+if (Login != null) {
+    last_Login = Login;
+	Login_Date = Audit_date;
+	
+} else {
+    Login = last_Login;
+	Login_Date = null;
+}
+
+// Assignee
+var Assignee, last_Assignee;
+if (Assignee != null) {
+    last_Assignee = Assignee;
+} else {
+    Assignee = last_Assignee;
+}
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>Login</name>
+        <rename>Login</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>Assignee</name>
+        <rename>Assignee</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>Login_Date</name>
+        <rename>Login_Date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Repeat P,S,AG</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+// Priority
+var Priority, last_Priority;
+if (Priority != null) { 
+	last_Priority = Priority;
+} else {
+	Priority = last_Priority;
+}
+
+
+// Status
+var Status, last_status;
+if (Status != null) { 
+	last_Status = Status;
+} else {
+	Status = last_Status;
+}
+
+// Assigned_Group 
+var Assigned_Group, last_Assigned_Group;
+if (Assigned_Group != null) {
+    last_Assigned_Group = Assigned_Group;
+} else {
+    Assigned_Group = last_Assigned_Group;
+}
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>Priority</name>
+        <rename>Priority</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>Status</name>
+        <rename>Status</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>Assigned_Group</name>
+        <rename>Assigned_Group</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SLA Response</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+var expiration_response, last_expiration_response, last_response_sla, response_deadline;
+var SLA_response = null, SLA_response_meet, SLA_response_date = null, 
+	SLA_response_group = null, SLA_response_login = null;
+
+if (n_ID == 1) {
+	expiration_response = dateAdd(Audit_date, "ss", Response_s);
+	response_deadline = dateDiff(Audit_date,expiration_response,"ss");
+	SLA_response_meet = null;
+
+} else {
+	expiration_response = last_expiration_response;
+}
+
+if (Previous_Status_ID == 3) {
+	expiration_response = dateAdd(Audit_date, "ss", response_deadline);
+}
+
+var diff_er_ad = dateDiff(expiration_response,Audit_date,"ss");
+var diff_fl_ad = dateDiff(first_LD,Audit_date,"ss"); // 
+
+// Cumple SLA si diff_er_ad &lt; 0
+if (diff_fl_ad == 0) { // Línea donde cumple/incumple
+	if (diff_er_ad &lt; 0) { // Response meet
+		SLA_response=Response_desc;
+		SLA_response_meet=1;
+		SLA_response_date=Audit_date;
+		SLA_response_group=Assigned_Group;
+		if (Login == null ) {
+			SLA_response_login = "undefined";
+		} else {
+			SLA_response_login=Login;
+		}		
+		response_deadline = null;
+	} else {
+		if (SLA_response_meet == null) { //Response violated
+			SLA_response = Response_desc;
+			SLA_response_date=Audit_date;
+			SLA_response_group = Assigned_Group;
+			if (Login == null ) {
+				SLA_response_login = "undefined";
+			} else {
+				SLA_response_login=Login;
+			}	
+			response_deadline = null;
+			SLA_response_meet = 0;
+		}
+	}
+}
+
+// Parada de reloj
+if (Status_ID == 3) {
+	if (diff_er_ad &lt; 0) { // si todavía cumple
+		//response_deadline = dateDiff(Audit_date,expiration_response,"ss");
+		expiration_response = null;	
+	}
+} else if (Status_ID != 4 &amp;&amp; Status_ID != 5 &amp;&amp; response_deadline > 0) {
+	response_deadline = dateDiff (Audit_date, expiration_response, "ss");
+}
+
+// Cumplimiento SLA
+if (response_deadline &lt;= 0 &amp;&amp; response_deadline != null) { // Response violated
+	SLA_response = Response_desc;
+	response_deadline = null;
+	SLA_response_date=expiration_response;
+	SLA_response_meet = 0;
+	SLA_response_group = Assigned_Group;
+	if (Login == null ) {
+		SLA_response_login = "undefined";
+	} else {
+		SLA_response_login=Login;
+	}
+} 
+last_expiration_response=expiration_response;
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>expiration_response</name>
+        <rename>expiration_response</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_response</name>
+        <rename>SLA_response</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_response_meet</name>
+        <rename>SLA_response_meet</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_response_date</name>
+        <rename>SLA_response_date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_response_group</name>
+        <rename>SLA_response_group</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>response_deadline</name>
+        <rename>response_deadline</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>diff_fl_ad</name>
+        <rename>diff_fl_ad</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_response_login</name>
+        <rename>SLA_response_login</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SLA reopen</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+var SLA_reopen = null, SLA_reopen_meet = null, SLA_reopen_date = null,
+	SLA_reopen_group = null, SLA_reopen_login = null; 
+if (n_ID == 1) {
+	SLA_reopen_meet;
+} 
+
+if (Status_ID == 4 &amp;&amp; SLA_reopen_meet == null) {
+	if (total_RD > 1) {
+		SLA_reopen = "SLA violated, number of resolutions: " + total_RD;
+		SLA_reopen_meet = 0;
+		SLA_reopen_date=Audit_date;
+		SLA_reopen_group = Assigned_Group;
+		if (Login == null ) {
+			SLA_reopen_login = "undefined";
+		} else {
+			SLA_reopen_login=Login;
+		}
+	} else {
+		SLA_reopen="Meets SLA, number of resolutions: " + total_RD;
+		SLA_reopen_meet=1;
+		SLA_reopen_date=Audit_date;
+		SLA_reopen_group=Assigned_Group;
+		if (Login == null ) {
+			SLA_reopen_login = "undefined";
+		} else {
+			SLA_reopen_login=Login;
+		}
+	}
+}
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>SLA_reopen</name>
+        <rename>SLA_reopen</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_reopen_meet</name>
+        <rename>SLA_reopen_meet</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_reopen_group</name>
+        <rename>SLA_reopen_group</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_reopen_date</name>
+        <rename>SLA_reopen_date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_reopen_login</name>
+        <rename>SLA_reopen_login</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SLA resolution</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+var expiration_resolution, last_expiration_resolution, last_resolution_sla, resolution_deadline;
+var SLA_resolution = null, SLA_resolution_meet, SLA_resolution_date = null, 
+	SLA_resolution_group = null, SLA_resolution_login = null;
+
+if (n_ID == 1) {
+	expiration_resolution = dateAdd(Audit_date, "ss", Resolution_s);
+	resolution_deadline = dateDiff(Audit_date,expiration_resolution,"ss");
+	SLA_resolution_meet = null;
+
+} else {
+	expiration_resolution = last_expiration_resolution;
+}
+
+if (Previous_Status_ID == 3) {
+	expiration_resolution = dateAdd(Audit_date, "ss", resolution_deadline);
+}
+
+var diff_er_ad = dateDiff(expiration_resolution,Audit_date,"ss");
+var diff_fr_ad = dateDiff(first_RD,Audit_date,"ss"); // 
+
+// Cumple SLA si diff_er_ad &lt; 0
+if (diff_fr_ad == 0) { // Primera resolución
+	if (diff_er_ad &lt; 0) { 
+		// Resolution meet
+		SLA_resolution=Resolution_desc;
+		SLA_resolution_meet=1;
+		SLA_resolution_date=Audit_date;
+		SLA_resolution_group=Assigned_Group;
+		if (Login == null ) {
+			SLA_resolution_login = "undefined";
+		} else {
+			SLA_resolution_login=Login;
+		}
+		resolution_deadline = null;
+	} else {
+		if (SLA_resolution_meet == null) { 
+			// Resolution violated
+			SLA_resolution = Resolution_desc;
+			SLA_resolution_date=Audit_date;
+			SLA_resolution_group = Assigned_Group;
+			if (Login == null ) {
+				SLA_resolution_login = "undefined";
+			} else {
+				SLA_resolution_login=Login;
+			}			
+			resolution_deadline = null;
+			SLA_resolution_meet = 1;
+		}
+	}
+}
+
+// Parada de reloj
+if (Status_ID == 3 ) {
+	if (diff_er_ad &lt; 0) { // si todavía cumple
+		resolution_deadline = dateDiff(Audit_date,expiration_resolution,"ss");
+		expiration_resolution = null;
+	}
+} else if (Status_ID != 4 &amp;&amp; Status_ID != 5 &amp;&amp; resolution_deadline > 0) {
+	resolution_deadline = dateDiff(Audit_date,expiration_resolution,"ss");
+}
+
+// Cumplimiento SLA
+if (resolution_deadline &lt;= 0 &amp;&amp; resolution_deadline != null) { 
+	// Resolution violated
+	SLA_resolution = Resolution_desc;
+	resolution_deadline = null;
+	SLA_resolution_meet = 0;
+	SLA_resolution_group = Assigned_Group;
+	
+	SLA_resolution_date=expiration_resolution;
+	if (Login == null ) {
+		SLA_resolution_login = "undefined";
+	} else {
+		SLA_resolution_login=Login;
+	}
+} 
+last_expiration_resolution=expiration_resolution;
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>expiration_resolution</name>
+        <rename>expiration_resolution</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_resolution</name>
+        <rename>SLA_resolution</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_resolution_meet</name>
+        <rename>SLA_resolution_meet</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_resolution_date</name>
+        <rename>SLA_resolution_date</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>diff_er_ad</name>
+        <rename>diff_er_ad</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>diff_fr_ad</name>
+        <rename>diff_fr_ad</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_resolution_group</name>
+        <rename>SLA_resolution_group</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>resolution_deadline</name>
+        <rename>resolution_deadline</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>SLA_resolution_login</name>
+        <rename>SLA_resolution_login</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SLAs</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Priority_ID</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Priority_Desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Response_h</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Resolution_h</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Response_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Resolution_desc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Response_s</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>Resolution_s</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>0</item>
+        <item>Critical</item>
+        <item>0.5</item>
+        <item>6</item>
+        <item>Response &lt; 30m</item>
+        <item>Resolution &lt; 6h</item>
+        <item>1800</item>
+        <item>21600</item>
+      </line>
+      <line>
+        <item>1</item>
+        <item>High</item>
+        <item>1</item>
+        <item>12</item>
+        <item>Response &lt; 1h</item>
+        <item>Resolution &lt; 12h</item>
+        <item>3600</item>
+        <item>43200</item>
+      </line>
+      <line>
+        <item>2</item>
+        <item>Medium</item>
+        <item>2</item>
+        <item>24</item>
+        <item>Response &lt; 2h</item>
+        <item>Resolution &lt; 24h</item>
+        <item>7200</item>
+        <item>86400</item>
+      </line>
+      <line>
+        <item>3</item>
+        <item>Low</item>
+        <item>4</item>
+        <item>48</item>
+        <item>Response &lt; 4h</item>
+        <item>Resolution &lt; 48h</item>
+        <item>14400</item>
+        <item>172800</item>
+      </line>
+    </data>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Audit_date</name>
+      </field>
+      <field>
+        <name>n_ID</name>
+      </field>
+      <field>
+        <name>ID</name>
+      </field>
+      <field>
+        <name>Priority_ID</name>
+      </field>
+      <field>
+        <name>Priority_Desc</name>
+      </field>
+      <field>
+        <name>Status_ID</name>
+      </field>
+      <field>
+        <name>Status_Desc</name>
+      </field>
+      <field>
+        <name>Reason_ID</name>
+      </field>
+      <field>
+        <name>Reason_Desc</name>
+      </field>
+      <field>
+        <name>Assigned_Group</name>
+      </field>
+      <field>
+        <name>New_assign</name>
+      </field>
+      <field>
+        <name>Login</name>
+      </field>
+      <field>
+        <name>Assignee</name>
+      </field>
+      <field>
+        <name>Company</name>
+      </field>
+      <field>
+        <name>Company_desc</name>
+      </field>
+      <field>
+        <name>Resolved_date</name>
+      </field>
+      <field>
+        <name>total_RD</name>
+      </field>
+      <field>
+        <name>Response_desc</name>
+      </field>
+      <field>
+        <name>Resolution_desc</name>
+      </field>
+      <field>
+        <name>SLA_response</name>
+      </field>
+      <field>
+        <name>SLA_response_meet</name>
+      </field>
+      <field>
+        <name>SLA_response_date</name>
+      </field>
+      <field>
+        <name>SLA_response_group</name>
+      </field>
+      <field>
+        <name>SLA_response_login</name>
+      </field>
+      <field>
+        <name>SLA_resolution</name>
+      </field>
+      <field>
+        <name>SLA_resolution_meet</name>
+      </field>
+      <field>
+        <name>SLA_resolution_date</name>
+      </field>
+      <field>
+        <name>SLA_resolution_group</name>
+      </field>
+      <field>
+        <name>SLA_resolution_login</name>
+      </field>
+      <field>
+        <name>SLA_reopen</name>
+      </field>
+      <field>
+        <name>SLA_reopen_meet</name>
+      </field>
+      <field>
+        <name>SLA_reopen_group</name>
+      </field>
+      <field>
+        <name>SLA_reopen_login</name>
+      </field>
+      <field>
+        <name>SLA_reopen_date</name>
+      </field>
+      <field>
+        <name>l_seconds</name>
+      </field>
+      <field>
+        <name>t_pending</name>
+      </field>
+      <field>
+        <name>t_first_resolution</name>
+      </field>
+      <field>
+        <name>t_total_resolution</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort ID-Audit_Date</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>ID</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Audit_date</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Priority</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <script>(.*)\s\(([0-9])\)</script>
+    <matcher>Priority</matcher>
+    <resultfieldname>result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>Y</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>Priority_Desc</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+      <field>
+        <name>Priority_ID</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Reason</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <script>(.*)\s\(([0-9]*)\)</script>
+    <matcher>Status_Reason</matcher>
+    <resultfieldname>result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>Y</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>Reason_Desc</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+      <field>
+        <name>Reason_ID</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split Status</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <script>(.*)\s\(([0-9])\)</script>
+    <matcher>Status</matcher>
+    <resultfieldname>result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>Y</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>Status_Desc</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+      <field>
+        <name>Status_ID</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>both</trimtype>
+        <currency/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>SLAs</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>Priority_ID</name>
+        <field>Priority_ID</field>
+      </key>
+      <value>
+        <name>Response_desc</name>
+        <rename>Response_desc</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>Resolution_desc</name>
+        <rename>Resolution_desc</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>Response_s</name>
+        <rename>Response_s</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>Resolution_s</name>
+        <rename>Resolution_s</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Time resolution, pending</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+var t_first_resolution, t_total_resolution, t_pending, resolved;
+
+if (n_ID == 1) {
+	t_first_resolution = t_seconds;
+	t_total_resolution = t_seconds;
+	t_pending = 0;
+	resolved=0;
+
+} else {
+	if (Status_ID == 1 || Status_ID == 2) {
+		if (resolved==0) {
+			t_first_resolution = t_first_resolution + t_seconds;
+			t_total_resolution = t_total_resolution + t_seconds;
+		} else {
+			t_total_resolution = t_total_resolution + t_seconds;
+		}
+		if (Status_ID == 4) {
+			resolved=1;
+		}		
+	}
+	if (Status_ID == 3) {
+		t_pending = t_pending + t_seconds;
+	}
+
+}
+
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>t_first_resolution</name>
+        <rename>t_first_resolution</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>t_total_resolution</name>
+        <rename>t_total_resolution</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>t_pending</name>
+        <rename>t_pending</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>first_LD,AG,RD</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <all_rows>Y</all_rows>
+    <ignore_aggregate>N</ignore_aggregate>
+    <field_ignore/>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>grp</prefix>
+    <add_linenr>N</add_linenr>
+    <linenr_fieldname/>
+    <give_back_row>N</give_back_row>
+    <group>
+      <field>
+        <name>ID</name>
+      </field>
+    </group>
+    <fields>
+      <field>
+        <aggregate>first_LD</aggregate>
+        <subject>Login_Date</subject>
+        <type>FIRST</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>first_AG</aggregate>
+        <subject>Audit_date</subject>
+        <type>FIRST</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>first_RD</aggregate>
+        <subject>Resolved_date</subject>
+        <type>FIRST</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>total_RD</aggregate>
+        <subject>count_RD</subject>
+        <type>LAST_INCL_NULL</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>first_Login</aggregate>
+        <subject>Login</subject>
+        <type>FIRST</type>
+        <valuefield/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ifnull t_seconds,l_seconds</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+
+
+if (t_seconds == null) {
+	t_seconds = 0;
+}
+
+if (l_seconds == null) { 
+	l_seconds = t_seconds;
+} 
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>l_seconds</name>
+        <rename>t_response</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>t_seconds</name>
+        <rename>t_resolution</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>n_Assigned_Group</name>
+    <type>FieldsChangeSequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <start>1</start>
+    <increment>1</increment>
+    <resultfieldName>n_Assigned_Group</resultfieldName>
+    <fields>
+      <field>
+        <name>ID</name>
+      </field>
+      <field>
+        <name>Assigned_Group</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>n_ID</name>
+    <type>FieldsChangeSequence</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <start>1</start>
+    <increment>1</increment>
+    <resultfieldName>n_ID</resultfieldName>
+    <fields>
+      <field>
+        <name>ID</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>t_seconds,l_seconds</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <failIfNoFile>Y</failIfNoFile>
+    <calculation>
+      <field_name>t_seconds</field_name>
+      <calc_type>DATE_DIFF_SEC</calc_type>
+      <field_a>Next_Date</field_a>
+      <field_b>Audit_date</field_b>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <calculation>
+      <field_name>l_seconds</field_name>
+      <calc_type>DATE_DIFF_SEC</calc_type>
+      <field_a>first_LD</field_a>
+      <field_b>first_AG</field_b>
+      <field_c/>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get files from result</name>
+    <type>FilesFromResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes/>
+</transformation>
